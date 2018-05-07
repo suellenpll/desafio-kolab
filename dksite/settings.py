@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'omgbs%fakl2wz$j!1708i-!#^uj44(z2*f)0)68t#bg7qqj3ud'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'dksite.herokuapp.com']
 
@@ -86,10 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dksite',
-        # 'USER': os.environ.get('DB_USER'),
-        'USER': 'suellenpll',
-        # 'PASSWORD': os.environ.get('DB_PASS'),
-        'PASSWORD': '60514112',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
         'HOST': 'localhost',
         'PORT': '',
     }
